@@ -1,0 +1,25 @@
+//dfs prototype for graph.
+void dfs(int vertex){
+
+    1://take action on vertex before exiting the vertex. 
+    for( int child : g[vertex]){
+
+        2://take action on child before entering the child node.
+        dfs(child)//calling dfs for the next node.
+        3://take action on child after exiting child node.
+    }
+    4://take action on vertex after entering the vertex.
+}
+//dfs prototype for tree
+void dfs(int vertex,int par=0){
+
+    1://take action on vertex before exiting the vertex. 
+    for( int child : g[vertex]){
+
+        2://take action on child before entering the child node.
+        if(child==par) continue;
+        dfs(child)//calling dfs for the next node.
+        3://take action on child after exiting child node.
+    }
+    4://take action on vertex after entering the vertex.
+}
